@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICMLD 2026 Kaynakça — Yapay Zekâ ile Bağlam İnşası</title>
+<meta name="description" content="ICMLD 2026 konuşması için derlenmiş, DOI/PMID bağlantılı tam kaynakça.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#ffffff;
+  --surface:#f4f1f5;
+  --fg:#2b2430;
+  --muted:#6b6372;
+  --accent:#b1551f;
+  --accent2:#4f6d64;
+  --rule:#e4dee7;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#201a24;
+    --surface:#2b2430;
+    --fg:#ece7ee;
+    --muted:#a99fb0;
+    --accent:#e08a4f;
+    --accent2:#8fb0a4;
+    --rule:#3a3240;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#201a24;
+  --surface:#2b2430;
+  --fg:#ece7ee;
+  --muted:#a99fb0;
+  --accent:#e08a4f;
+  --accent2:#8fb0a4;
+  --rule:#3a3240;
+  color-scheme: dark;
+}
+
+* { box-sizing:border-box; }
+html,body{ background:var(--bg); }
+body{
+  margin:0;
+  padding-inline:20px;
+  padding-block: 32px 48px;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Source Sans 3", "Segoe UI", Arial, sans-serif;
+  line-height:1.5;
+}
+.wrap{ max-width:760px; margin:0 auto; }
+
+h1{
+  font-family:"Fraunces","Source Serif 4", Georgia, serif;
+  font-weight:600;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing:-0.01em;
+  margin: 0 0 6px;
+  text-wrap: balance;
+}
+.kicker{
+  font-size:12.5px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 14px;
+}
+.lede{
+  color:var(--muted);
+  font-size:15.5px;
+  max-width:60ch;
+  margin: 0 0 30px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--rule);
+}
+.lede b{ color:var(--fg); }
+
+nav.toc{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 10px;
+  margin-bottom:38px;
+}
+nav.toc a{
+  font-size:12.5px;
+  color:var(--accent2);
+  text-decoration:none;
+  border:1px solid var(--rule);
+  padding:5px 11px;
+  border-radius:100px;
+  white-space:nowrap;
+}
+nav.toc a:hover{ border-color:var(--accent2); }
+
+section{ margin-bottom:38px; scroll-margin-top:16px; }
+section h2{
+  font-family:"Fraunces","Source Serif 4", Georgia, serif;
+  font-weight:600;
+  font-size:19px;
+  margin: 0 0 4px;
+  color:var(--fg);
+}
+section .sec-note{
+  font-size:13px;
+  color:var(--muted);
+  margin:0 0 16px;
+  max-width:62ch;
+}
+
+ol.refs{
+  list-style:none;
+  margin:0; padding:0;
+  display:flex; flex-direction:column; gap:14px;
+}
+ol.refs li{
+  display:flex;
+  gap:14px;
+  padding:14px 16px;
+  background:var(--surface);
+  border-radius:10px;
+  min-width:0;
+}
+.num{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:12px;
+  color:var(--muted);
+  flex:0 0 auto;
+  padding-top:2px;
+  min-width:1.6em;
+}
+.ref-body{ min-width:0; flex:1 1 auto; }
+.ref-body .cite{
+  font-size:14.5px;
+  color:var(--fg);
+}
+.ref-body .cite .year{ color:var(--muted); }
+.ref-body .note{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:4px;
+}
+.ref-body .links{
+  margin-top:6px;
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+.ref-body .links a{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:12px;
+  color:var(--accent2);
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  word-break:break-all;
+}
+.ref-body .links a:hover{ color:var(--accent); }
+
+footer{
+  margin-top:50px;
+  padding-top:20px;
+  border-top:1px solid var(--rule);
+  font-size:12.5px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+@media (max-width:480px){
+  ol.refs li{ padding:12px; gap:10px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">ICMLD 2026 · Yapay Zekâ ile Bağlam İnşası</p>
+  <h1>Kaynakça</h1>
+  <p class="lede">
+    Bu sayfa, <b>&ldquo;Yapay Zekâ ile Bağlam İnşası: Kapsayıcı Matematik Eğitiminde Ev ve Okul Arasında
+    Dijital Köprüler Kurmak&rdquo;</b> başlıklı konuşmada (4. Uluslararası Matematik Öğrenme Güçlükleri
+    Kongresi — ICMLD 2026) aktarılan her iddianın kaynağını, DOI/PMID/arXiv bağlantılarıyla birlikte listeler.
+    Tüm kaynaklar bu konuşma hazırlanırken PubMed, Valency ve doğrudan yayıncı sayfaları üzerinden
+    doğrulanmıştır.
+  </p>
+
+  <nav class="toc">
+    <a href="#home">Ev ve ebeveyn kaygısı</a>
+    <a href="#turkiye">Türkiye &amp; ekolojik çerçeve</a>
+    <a href="#teknoloji">Var olan teknolojiler</a>
+    <a href="#roller">Yapay zekânın üç rolü</a>
+    <a href="#kanit">Ana kanıt &amp; nüans</a>
+    <a href="#riskler">Riskler ve sınırlar</a>
+    <a href="#baglam">Genel çerçeve</a>
+  </nav>
+
+  <section id="home">
+    <h2>Ev, ebeveyn kaygısı ve matematik</h2>
+    <p class="sec-note">Ev sayı ortamı (home numeracy environment) ve ebeveyn matematik kaygısının çocuğun matematik gelişimine etkisi.</p>
+    <ol class="refs">
+      <li>
+        <span class="num">01</span>
+        <div class="ref-body">
+          <div class="cite">Hart, S. A., Ganley, C. M. &amp; Purpura, D. J. <span class="year">(2016)</span>. Understanding the Home Math Environment and Its Role in Predicting Parent Report of Children's Math Skills. <i>PLoS ONE</i>.</div>
+          <div class="links"><a href="https://doi.org/10.1371/journal.pone.0168227" target="_blank" rel="noopener">doi.org/10.1371/journal.pone.0168227</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div class="ref-body">
+          <div class="cite">Cosso, J., Finders, J. K., Duncan, R. J., Schmitt, S. A. &amp; Purpura, D. J. <span class="year">(2023)</span>. The home numeracy environment and children's math skills: The moderating role of parents' math anxiety. <i>Journal of Experimental Child Psychology</i>.</div>
+          <div class="links"><a href="https://doi.org/10.1016/j.jecp.2022.105578" target="_blank" rel="noopener">doi.org/10.1016/j.jecp.2022.105578</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div class="ref-body">
+          <div class="cite">Silver, A. M., Elliott, L. &amp; Libertus, M. E. <span class="year">(2021)</span>. When beliefs matter most: Examining children's math achievement in the context of parental math anxiety. <i>Journal of Experimental Child Psychology</i>.</div>
+          <div class="links"><a href="https://doi.org/10.1016/j.jecp.2020.104992" target="_blank" rel="noopener">doi.org/10.1016/j.jecp.2020.104992</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div class="ref-body">
+          <div class="cite">Cosso, J. <span class="year">(2026)</span>. Validation of a Culture-Contextualized Measure of the Home Numeracy Environment in Latine Families. <i>Journal of Family Psychology</i>.</div>
+          <div class="links"><a href="https://doi.org/10.1037/fam0001342" target="_blank" rel="noopener">doi.org/10.1037/fam0001342</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="turkiye">
+    <h2>Türkiye'den kanıt &amp; ekolojik çerçeve</h2>
+    <p class="sec-note">Van'da ebeveynlerle yapılan fenomenolojik çalışma ve Bronfenbrenner'in Ekolojik Sistemler Kuramı'nın uygulanışı.</p>
+    <ol class="refs">
+      <li>
+        <span class="num">05</span>
+        <div class="ref-body">
+          <div class="cite">Ulubaş, S. C. &amp; Gök, M. <span class="year">(2026)</span>. Parental awareness, diagnostic processes, and support needs regarding mathematical learning difficulties. <i>BMC Psychology</i>.</div>
+          <div class="links">
+            <a href="https://doi.org/10.1186/s40359-026-04025-3" target="_blank" rel="noopener">doi.org/10.1186/s40359-026-04025-3</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41580849/" target="_blank" rel="noopener">PMID 41580849</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="num">06</span>
+        <div class="ref-body">
+          <div class="cite">Castaldi, E., Piazza, M. &amp; Iuculano, T. <span class="year">(2020)</span>. Learning disabilities: Developmental dyscalculia. <i>Handbook of Clinical Neurology</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/32977896/" target="_blank" rel="noopener">PMID 32977896</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="teknoloji">
+    <h2>Var olan teknolojiler (çocuğa yönelik)</h2>
+    <ol class="refs">
+      <li>
+        <span class="num">07</span>
+        <div class="ref-body">
+          <div class="cite">Dhingra, K., Aggarwal, R., Garg, A., Pujari, J. &amp; Yadav, D. <span class="year">(2022)</span>. Mathlete: an adaptive assistive technology tool for children with dyscalculia. <i>Disability and Rehabilitation: Assistive Technology</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/36260424/" target="_blank" rel="noopener">PMID 36260424</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">08</span>
+        <div class="ref-body">
+          <div class="cite">Jadhav, D., Chettri, S. K., Tripathy, A. K. &amp; Saikia, M. J. <span class="year">(2025)</span>. A Technology-Driven Assistive Learning Tool and Framework for Personalized Dyscalculia Interventions (EDSense). <i>European Journal of Investigation in Health, Psychology and Education</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/40422314/" target="_blank" rel="noopener">PMID 40422314</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">09</span>
+        <div class="ref-body">
+          <div class="cite">Mukhwana, M., Bika, S. L., Kaur, M. &amp; Parmar, P. <span class="year">(2026)</span>. Innovative pedagogies for inclusive education: a systematic literature review of assistive technology within the universal design for learning framework. <i>Disability and Rehabilitation: Assistive Technology</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/42200393/" target="_blank" rel="noopener">PMID 42200393</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="roller">
+    <h2>Yapay zekânın aileye yönelik üç rolü</h2>
+    <ol class="refs">
+      <li>
+        <span class="num">10</span>
+        <div class="ref-body">
+          <div class="cite">Farmer, R., Lockwood, A., Floyd, R. G. &amp; Sisco, A. <span class="year">(2026)</span>. AI in Psychoeducational Assessment: A Descriptive Study of Report Generation. <i>Journal of Applied School Psychology</i>, 42(1).</div>
+          <div class="links"><a href="https://doi.org/10.1080/15377903.2026.2629395" target="_blank" rel="noopener">doi.org/10.1080/15377903.2026.2629395</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">11</span>
+        <div class="ref-body">
+          <div class="cite">Frey, S. M., Milne Wenderlich, A., Craig, C., Yin, H. S. &amp; Montes, G. <span class="year">(2026)</span>. Prompting generative artificial intelligence to create plain language patient education materials. <i>Patient Education and Counseling</i>. <span class="note">(sağlık alanından çapraz analoji olarak kullanıldı)</span></div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/42641226/" target="_blank" rel="noopener">PMID 42641226</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">12</span>
+        <div class="ref-body">
+          <div class="cite">Alrubaian, A. <span class="year">(2026)</span>. Assessing the Quality, Usefulness, and Reliability of Large Language Models (ChatGPT, DeepSeek, and Gemini) in Answering General Questions Regarding Dyslexia and Dyscalculia. <i>Psychiatric Quarterly</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/40504301/" target="_blank" rel="noopener">PMID 40504301</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">13</span>
+        <div class="ref-body">
+          <div class="cite">Wei, Y., Jiang, Y.-H., Liu, J., Qi, C., Jia, L. &amp; Jia, R. <span class="year">(2024)</span>. The Advancement of Personalized Learning Potentially Accelerated by Generative AI. <i>arXiv:2412.00691</i>.</div>
+          <div class="links"><a href="https://arxiv.org/abs/2412.00691" target="_blank" rel="noopener">arxiv.org/abs/2412.00691</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="kanit">
+    <h2>Ana kanıt: aile katılımının moderasyon etkisi</h2>
+    <ol class="refs">
+      <li>
+        <span class="num">14</span>
+        <div class="ref-body">
+          <div class="cite">Liu, X.-L., Cao, T.-T., Kong, Y., Yu, W.-W., Qu, J.-B. &amp; Liu, F.-J. <span class="year">(2026)</span>. AI-enabled special education services: the moderating role of parental involvement in home-school-community collaboration. <i>Frontiers in Psychology</i>, 17:1772998.</div>
+          <div class="links">
+            <a href="https://doi.org/10.3389/fpsyg.2026.1772998" target="_blank" rel="noopener">doi.org/10.3389/fpsyg.2026.1772998</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41982354/" target="_blank" rel="noopener">PMID 41982354</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="num">15</span>
+        <div class="ref-body">
+          <div class="cite">Ho, H.-R., Kargeti, N., Liu, Z. &amp; Mutlu, B. <span class="year">(2025)</span>. SET-PAiREd: Designing for Parental Involvement in Learning with an AI-Assisted Educational Robot. <i>Proceedings of CHI 2025</i>.</div>
+          <div class="links">
+            <a href="https://doi.org/10.1145/3706598.3713330" target="_blank" rel="noopener">doi.org/10.1145/3706598.3713330</a>
+            <a href="https://arxiv.org/abs/2502.17623" target="_blank" rel="noopener">arxiv.org/abs/2502.17623</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="num">16</span>
+        <div class="ref-body">
+          <div class="cite">Kuusimäki, A.-M., Uusitalo-Malmivaara, L. &amp; Tirri, K. <span class="year">(2019)</span>. The Role of Digital School-Home Communication in Teacher Well-Being. <i>Frontiers in Psychology</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/31798484/" target="_blank" rel="noopener">PMID 31798484</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">17</span>
+        <div class="ref-body">
+          <div class="cite">Alamolhoda, J. <span class="year">(2021)</span>. Improving the Model of Family-School Interaction with the Help of Digital Education. <i>Contemporary School Psychology</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/34035988/" target="_blank" rel="noopener">PMID 34035988</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="riskler">
+    <h2>Riskler ve sınırlar</h2>
+    <ol class="refs">
+      <li>
+        <span class="num">18</span>
+        <div class="ref-body">
+          <div class="cite">Taniguchi, K. <span class="year">(2023)</span>. The impact of parental confidence in using technology on parental engagement in children's education at home during COVID-19 lockdowns: evidence from 19 countries. <i>SN Social Sciences</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/37251211/" target="_blank" rel="noopener">PMID 37251211</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">19</span>
+        <div class="ref-body">
+          <div class="cite">Eltigani, H., Haroon, R., Kocak, A., Bin Faisal, A., Martin, N. &amp; Dogar, F. <span class="year">(2025)</span>. WaLLM — Insights from an LLM-Powered Chatbot deployment via WhatsApp. <i>arXiv:2505.08894</i>.</div>
+          <div class="links"><a href="https://arxiv.org/abs/2505.08894" target="_blank" rel="noopener">arxiv.org/abs/2505.08894</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">20</span>
+        <div class="ref-body">
+          <div class="cite">Tadpatrikar, A., Sharma, M. K. &amp; Viswanath, S. S. <span class="year">(2021)</span>. Influence of technology usage on family communication patterns and functioning: A systematic review. <i>Asian Journal of Psychiatry</i>.</div>
+          <div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/33609981/" target="_blank" rel="noopener">PMID 33609981</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="baglam">
+    <h2>Genel çerçeve &amp; bağlam</h2>
+    <ol class="refs">
+      <li>
+        <span class="num">21</span>
+        <div class="ref-body">
+          <div class="cite">Bronfenbrenner, U. <span class="year">(1979)</span>. <i>The Ecology of Human Development: Experiments by Nature and Design</i>. Harvard University Press.</div>
+          <div class="note">Ekolojik Sistemler Kuramı'nın temel kaynağı; Ulubaş &amp; Gök (2026) tarafından MLD bağlamında uygulanmıştır.</div>
+        </div>
+      </li>
+      <li>
+        <span class="num">22</span>
+        <div class="ref-body">
+          <div class="cite">Esbenshade, L., Sarkar, S., Nucci, D., Edwards, A., Nielsen, S., Rosenberg, J. M. et al. <span class="year">(2025)</span>. Emerging Patterns of GenAI Use in K-12 Science and Mathematics Education. <i>arXiv:2509.10747</i>.</div>
+          <div class="links"><a href="https://arxiv.org/abs/2509.10747" target="_blank" rel="noopener">arxiv.org/abs/2509.10747</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="num">23</span>
+        <div class="ref-body">
+          <div class="cite">Song, Y., Kim, J., Liu, Z., Li, C. &amp; Xing, W. <span class="year">(2024)</span>. Students' Perceived Roles, Opportunities, and Challenges of a Generative AI-powered Teachable Agent. <i>arXiv:2409.06721</i>.</div>
+          <div class="links"><a href="https://arxiv.org/abs/2409.06721" target="_blank" rel="noopener">arxiv.org/abs/2409.06721</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>ICMLD 2026 — Doç. Dr. Serkan Özel, Boğaziçi Üniversitesi</span>
+    <span>Son güncelleme: Ekim 2026</span>
+  </footer>
+</div>
+</body>
+</html>
